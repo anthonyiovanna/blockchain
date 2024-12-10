@@ -1,0 +1,55 @@
+name: Code Example Feedback
+description: Report issues or suggest improvements for code examples
+title: "[CODE-EXAMPLE] "
+labels: ["code-examples"]
+body:
+  - type: input
+    id: example_location
+    attributes:
+      label: Example Location
+      description: Which file and section contains the code example?
+      placeholder: "e.g., registry_guide.md#usage-example"
+    validations:
+      required: true
+
+  - type: textarea
+    id: issue_description
+    attributes:
+      label: Issue Description
+      description: What's wrong with the current code example?
+      placeholder: "The current example..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_behavior
+    attributes:
+      label: Expected Behavior
+      description: What should the code example demonstrate?
+      placeholder: "The example should show..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_solution
+    attributes:
+      label: Proposed Solution
+      description: Provide your suggested code example
+      placeholder: |
+        ```rust
+        // Your code here
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment_details
+    attributes:
+      label: Environment Details
+      description: What environment was used to test the code?
+      value: |
+        - Rust Version:
+        - Dependencies:
+        - Operating System:
+    validations:
+      required: true

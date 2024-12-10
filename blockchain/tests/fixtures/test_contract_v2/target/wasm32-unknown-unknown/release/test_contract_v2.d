@@ -1,0 +1,1 @@
+C:\Dev\Rust\Blockchain\blockchain\tests\fixtures\test_contract_v2\target\wasm32-unknown-unknown\release\test_contract_v2.wasm: C:\Dev\Rust\Blockchain\blockchain\tests\fixtures\test_contract_v2\src\lib.rs

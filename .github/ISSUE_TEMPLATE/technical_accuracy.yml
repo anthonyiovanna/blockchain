@@ -1,0 +1,63 @@
+name: Technical Accuracy Report
+description: Report technical inaccuracies in documentation or implementation
+title: "[TECH] "
+labels: ["technical-accuracy"]
+body:
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic/Feature
+      description: Which area contains the technical inaccuracy?
+      options:
+        - Contract System
+        - Registry Implementation
+        - Access Control
+        - State Management
+        - Performance Metrics
+        - API Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: inaccuracy_description
+    attributes:
+      label: Inaccuracy Description
+      description: Describe the technical inaccuracy in detail
+      placeholder: "The current documentation/implementation incorrectly states/implements..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting_evidence
+    attributes:
+      label: Supporting Evidence
+      description: Provide evidence supporting your claim of inaccuracy
+      placeholder: |
+        - Technical references
+        - Code examples
+        - Documentation links
+        - Test results
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_correction
+    attributes:
+      label: Proposed Correction
+      description: What should be the correct information/implementation?
+      placeholder: "The correct information/implementation should be..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: verification_steps
+    attributes:
+      label: Verification Steps
+      description: How can we verify the proposed correction?
+      placeholder: |
+        1. Step one to verify
+        2. Step two to verify
+        3. Expected results
+    validations:
+      required: true

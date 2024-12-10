@@ -1,0 +1,60 @@
+name: Documentation Feedback
+description: Report issues or suggest improvements for documentation
+title: "[DOC] "
+labels: ["documentation"]
+body:
+  - type: dropdown
+    id: doc_area
+    attributes:
+      label: Documentation Area
+      description: Which documentation section does this feedback relate to?
+      options:
+        - Deployment Guide
+        - Error Handling Guide
+        - Registry Guide
+        - Architecture Documentation
+        - Technical Stack
+        - Other
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: issue_type
+    attributes:
+      label: Issue Type
+      description: What type of documentation issue is this?
+      options:
+        - Clarity - Content is unclear or confusing
+        - Completeness - Missing important information
+        - Accuracy - Information is incorrect
+        - Format - Presentation or structure issues
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current_content
+    attributes:
+      label: Current Content
+      description: Please quote or describe the current documentation content
+      placeholder: "Current documentation says..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_improvements
+    attributes:
+      label: Suggested Improvements
+      description: What changes would make this documentation better?
+      placeholder: "The documentation should..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Description
+      description: How will this improvement help users?
+      placeholder: "This improvement will help users by..."
+    validations:
+      required: true

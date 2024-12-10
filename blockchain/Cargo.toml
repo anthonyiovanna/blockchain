@@ -1,0 +1,108 @@
+[package]
+name = "blockchain"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A blockchain implementation in Rust"
+
+[dependencies]
+# Core cryptography
+ed25519-dalek = "2.0"
+blake3 = "1.5"
+rand = "0.8"
+hex = "0.4"
+sha2 = "0.10"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_bytes = "0.11"
+bincode = "1.3"
+
+# Async Runtime and Traits
+tokio = { version = "1.35", features = ["full", "rt-multi-thread"] }
+async-trait = "0.1"
+
+# Storage
+rocksdb = "0.21"
+
+# Networking
+libp2p = { version = "0.53", features = [
+    "tcp",
+    "tokio",
+    "dns",
+    "async-std",
+    "noise",
+    "yamux",
+    "websocket",
+    "ping",
+    "gossipsub",
+    "identify",
+    "request-response",
+    "relay",
+    "metrics",
+    "macros"
+] }
+futures = "0.3"
+
+# Smart Contracts
+wasmer = "4.2"
+wasmer-compiler = "4.2"
+
+# API and RPC
+actix-web = "4.4"
+actix-cors = "0.6"
+actix-rt = "2.9"
+jsonrpc-core = "18.0"
+jsonrpc-core-client = "18.0"
+jsonrpc-derive = "18.0"
+jsonrpc-http-server = "18.0"
+
+# Security
+jsonwebtoken = "9.2"
+actix-web-httpauth = "0.8"
+actix-governor = "0.5"
+bcrypt = "0.15"
+argon2 = "0.5"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Logging and Monitoring
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "json"] }
+tracing-actix-web = "0.7"
+prometheus = "0.13"
+actix-web-prom = "0.7"
+
+# Version Management
+semver = "1.0"
+
+# Testing and Utils
+once_cell = "1.19"
+
+[dev-dependencies]
+tempfile = "3.8"
+actix-rt = "2.9"
+criterion = "0.5"  # For benchmarking
+tokio-test = "0.4"  # For async testing utilities
+test-case = "3.3"  # For parameterized testing
+proptest = "1.4"  # For property-based testing
+mockall = "0.12"  # For mocking in tests
+async-std = { version = "1.12", features = ["attributes"] }  # Additional async testing support
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = 'abort'
+strip = true
+
+[profile.dev]
+opt-level = 0
+debug = true
+
+[[bench]]
+name = "contract_benchmarks"
+harness = false

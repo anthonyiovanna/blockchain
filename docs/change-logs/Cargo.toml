@@ -1,0 +1,17 @@
+# Change Log for Cargo.toml
+
+## [2024-01-09] Added Version Management Dependencies
+
+### Added
+- Added semver = "1.0" under dependencies for semantic version handling
+- Created new "Version Management" section in dependencies
+
+### Purpose
+- Support semantic versioning in contract registry
+- Enable version compatibility checks
+- Facilitate proper version upgrade validation
+
+### Impact
+- Improved version management capabilities
+- Enhanced contract upgrade safety
+- Better version conflict detection

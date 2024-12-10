@@ -1,0 +1,61 @@
+name: User Experience Feedback
+description: Report issues or suggest improvements for user experience
+title: "[UX] "
+labels: ["user-experience"]
+body:
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Feature/Process
+      description: Which feature or process is this feedback about?
+      options:
+        - Contract Deployment
+        - Registry Management
+        - Access Control Configuration
+        - State Management
+        - Documentation Navigation
+        - API Usage
+        - Error Handling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: experience_issue
+    attributes:
+      label: Experience Issue
+      description: Describe the current user experience issue
+      placeholder: "When using this feature/process, I found it difficult to..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_impact
+    attributes:
+      label: User Impact
+      description: How does this issue affect users?
+      placeholder: "This issue impacts users by..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement_suggestion
+    attributes:
+      label: Improvement Suggestion
+      description: How could the experience be improved?
+      placeholder: "The experience could be improved by..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success_criteria
+    attributes:
+      label: Success Criteria
+      description: How can we measure if the improvement is successful?
+      placeholder: |
+        The improvement would be successful if:
+        - Criterion 1
+        - Criterion 2
+        - Criterion 3
+    validations:
+      required: true

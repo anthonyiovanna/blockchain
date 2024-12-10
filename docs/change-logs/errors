@@ -1,0 +1,19 @@
+# Errors Changelog
+
+## [Current Update]
+- Updated Wasmer import error status to FIXED
+  - Replaced `wasmer::NativeFunc` with `wasmer::TypedFunction`
+  - Implemented proper function environment handling with `FunctionEnv`
+  - Added function type definitions for all native functions
+- Added new entry to Recently Fixed section
+- Updated Notes section to reflect all issues resolved
+
+## Previous Changes
+- Added new Wasmer import error in contract/mod.rs
+- Updated Notes section to reflect new priority
+- Reorganized Next Steps to prioritize Wasmer import fix
+- Documented resolution of Function::new usage
+- Documented resolution of method argument validation
+- Documented resolution of cache iterator issue
+- Documented resolution of role management validation
+- Documented resolution of error type system
